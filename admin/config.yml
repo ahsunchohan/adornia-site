@@ -1,1 +1,20 @@
-# Netlify CMS config placeholder
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "watches"
+    label: "Watches"
+    folder: "content/watches"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["men", "women", "unisex"], multiple: true }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Video", name: "video", widget: "file", required: false }

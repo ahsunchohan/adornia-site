@@ -41,7 +41,7 @@ nav button {
   width: 280px;
   text-align: center;
 }
-.product img {
+.product img, .product video {
   width: 100%;
   border-radius: 8px;
 }
