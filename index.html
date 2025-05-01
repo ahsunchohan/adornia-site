@@ -1,1 +1,38 @@
-<!-- index placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adornia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="adornia_logo.png" alt="Adornia Logo" class="logo" />
+    <h2>SHAPING PRECIOUS MOMENTS</h2>
+    <nav>
+      <button onclick="filter('men')">MEN'S</button>
+      <button onclick="filter('women')">WOMEN'S</button>
+      <button onclick="filter('unisex')">UNISEX</button>
+    </nav>
+  </header>
+  <section id="products" class="product-grid">
+    <!-- Sample Product -->
+    <div class="product" data-category="men unisex">
+      <img src="watch1.jpg" alt="Watch 1">
+      <h3>Golden Classic</h3>
+      <p>Elegant gold-tone wristwatch with timeless design.</p>
+      <span>$300</span>
+      <a href="https://wa.me/1234567890" target="_blank">Order on WhatsApp</a>
+    </div>
+    <!-- Add more product divs here -->
+  </section>
+  <script>
+    function filter(category) {
+      document.querySelectorAll('.product').forEach(p => {
+        p.style.display = p.dataset.category.includes(category) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
